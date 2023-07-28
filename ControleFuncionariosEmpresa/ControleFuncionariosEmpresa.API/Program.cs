@@ -1,17 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
+using ControleFuncionariosEmpresa.API.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args); // Cria o builder da aplicaçãox
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(); // Adiciona o uso de controllers
 
-var app = builder.Build();
+builder.Services.ConfigurarCors();
+builder.Services.ConfigurarIntegracaoIIS();
 
-// Configure the HTTP request pipeline.
+var app = builder.Build(); // Cria a aplicação
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment()) // Verifica se o ambiente é de desenvolvimento
+{
+    app.UseDeveloperExceptionPage(); // Habilita o uso de página de erro
+}
+else
+{
+    app.UseHsts(); // Habilita o uso de HSTS
+}
 
-app.UseAuthorization();
+app.UseHttpsRedirection(); // Redireciona para HTTPS
+app.UseStaticFiles(); // Habilita o uso de arquivos estáticos
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    // Habilita o uso de proxy reverso
+    ForwardedHeaders = ForwardedHeaders.All
+});
 
-app.MapControllers();
-
-app.Run();
+app.UseCors("CorsPolicy"); // Habilita o CORS
+app.UseAuthorization(); // Habilita o uso de autorização
+app.MapControllers(); // Habilita o uso de controllers
+app.Run(); // Executa a aplicação

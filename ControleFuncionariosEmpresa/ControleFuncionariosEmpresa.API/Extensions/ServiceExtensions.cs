@@ -14,4 +14,11 @@ public static class ServiceExtensions
             });
         });
     }
+
+    public static void ConfigurarIntegracaoIIS(this IServiceCollection services)
+    {
+        services.Configure<IISOptions>(options =>
+        {
+        });
+    }
 }
