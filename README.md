@@ -1,32 +1,43 @@
+# ULTIMATE ASP.NET CORE WEB API - Segunda Edição
+
+Este repositório é dedicado ao estudo do ebook "ULTIMATE ASP.NET CORE WEB API - Second Edition" da Code Maze, escrito por Vladimir Pecanac e Marinko Spasojevic. O objetivo é explorar e aplicar os conceitos ensinados no livro para aprofundar conhecimentos em ASP.NET Core Web API, utilizando o .NET 7.
+
 ## Conteúdo do Ebook
 
-O Ebook aborda os seguintes tópicos:
+O livro abrange uma variedade de tópicos importantes para o desenvolvimento de APIs Web com ASP.NET Core, incluindo:
 
-- Introdução ao ASP.NET Core Web API
-- Configuração e Injeção de Dependência
-- Implementação de Entidades e Repositórios
-- Logging e Manipulação de Erros
-- Versionamento da API
-- Autenticação e Autorização
-- Documentação da API com Swagger
-- Testes Unitários e de Integração
-- Implantação da API
+- Configuração do Projeto
+- Manipulação de Solicitações GET
+- Negociação de Conteúdo
+- Trabalhando com Solicitações DELETE
+- Validação
+- Paginação
+- Ordenação
+- Trabalhando com Solicitações OPTIONS e HEAD
+- Caching
+- Token de Atualização
+- Implantação para IIS
+- Configuração de Serviço de Log
+- Tratamento Global de Erros
+- Segurança e Idempotência de Métodos
+- Trabalhando com Solicitações PUT
+- Código Assíncrono
+- Filtragem
+- Moldagem de Dados
+- Documento Raiz
+- Limitação de Taxa e Estrangulamento
+- Configuração de Vinculação e Padrão de Opções
+- Arquitetura Onion
 
-## Como executar o projeto
+## Autores
 
-1. Clone o repositório:
-git clone https://github.com/ddcsilva/Ebook-Code-Maze-Ultimate-ASPNET-API.git
+- **Vladimir Pecanac**
+- **Marinko Spasojevic**
 
-2. Navegue até a pasta do projeto:
-`cd Ebook-Code-Maze-Ultimate-ASPNET-API`
+## Recursos Adicionais
 
-3. Execute o projeto usando o comando `dotnet run` no terminal ou utilizando seu editor de código de preferência.
+Este repositório também pode incluir exemplos práticos, anotações pessoais e exercícios relacionados aos tópicos abordados no livro.
 
-A API estará disponível no endereço `http://localhost:5000/`.
+## Link do Ebook
 
-## Pré-requisitos
-
-- .NET Core SDK
-- Um editor de código de sua preferência (por exemplo, Visual Studio Code, Visual Studio, ou Rider)
-
-## License
+Para mais informações sobre o ebook, visite a [página oficial](https://code-maze.com/ultimate-aspnetcore-webapi-second-edition/).
